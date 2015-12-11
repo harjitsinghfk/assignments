@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.flipkart.todo.AddNewItem">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Title"
+        android:textColor="#FF000000"
+        android:id="@+id/titleTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleEditText"
+        android:layout_below="@+id/titleTextView"
+        android:textSize="13dp"
+        android:inputType="textCapSentences"
+        android:gravity="top|left"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textColor="#FF000000"
+        android:id="@+id/descriptionTextView"
+        android:layout_marginTop="0dp"
+        android:layout_below="@+id/titleEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/descriptionEditText"
+        android:textSize="13dp"
+        android:inputType="textCapSentences"
+        android:gravity="top|left"
+        android:layout_below="@+id/descriptionTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/titleEditText"
+        android:layout_alignEnd="@+id/titleEditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:textSize="13dp"
+        android:gravity="top|left"
+        android:id="@+id/dateEditText"
+        android:layout_below="@+id/descriptionEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:focusable="false"
+        android:layout_marginTop="42dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:textSize="13dp"
+        android:gravity="top|left"
+        android:id="@+id/timeEditText"
+        android:focusable="false"
+        android:layout_alignBottom="@+id/dateEditText"
+        android:layout_toEndOf="@+id/dateEditText"
+        android:layout_toRightOf="@+id/dateEditText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:layout_marginTop="20dp"
+        android:textColor="#FF000000"
+        android:id="@+id/dateTextView"
+        android:layout_below="@+id/descriptionEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:textColor="#FF000000"
+        android:layout_marginTop="20dp"
+        android:id="@+id/timeTextView"
+        android:layout_below="@+id/descriptionEditText"
+        android:layout_alignLeft="@+id/timeEditText"
+        android:layout_alignStart="@+id/timeEditText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Priority"
+        android:id="@+id/priorityTextView"
+        android:textColor="#FF000000"
+        android:layout_below="@+id/dateEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="46dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:entries="@array/priorities"
+        android:spinnerMode="dropdown"
+        android:layout_toRightOf="@+id/descriptionTextView"
+        android:layout_alignTop="@+id/priorityTextView"
+        android:layout_alignRight="@+id/timeTextView"
+        android:layout_alignEnd="@+id/timeTextView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/saveButton"
+        android:layout_below="@+id/spinner"
+        android:layout_marginTop="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:id="@+id/cancelButton"
+        android:layout_below="@+id/saveButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/titleVoiceImageButton"
+        android:src="@android:drawable/ic_btn_speak_now"
+        android:layout_alignBottom="@+id/titleEditText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/titleEditText" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionVoiceImageButton"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:src="@android:drawable/ic_btn_speak_now"
+        android:layout_alignTop="@+id/descriptionEditText" />
+
+</RelativeLayout>

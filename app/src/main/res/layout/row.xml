@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Day"
+        android:id="@+id/dayTextView"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#FFD95555"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/priorityTextView" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/imageButton"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/todo_icon"
+        android:scaleType="centerCrop"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dayTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Title"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textSize="16dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#FF000000"
+        android:id="@+id/titleTextView"
+        android:layout_toRightOf="@+id/imageButton"
+        android:layout_below="@+id/dayTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Priority"
+        android:id="@+id/priorityTextView"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/titleTextView"
+        android:layout_alignRight="@+id/imageButton" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:id="@+id/timeTextView"
+        android:layout_below="@+id/titleTextView"
+        android:layout_alignLeft="@+id/titleTextView"
+        android:layout_alignStart="@+id/titleTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:id="@+id/textView"
+        android:layout_below="@+id/imageButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:id="@+id/dateTextView"
+        android:layout_marginRight="10dp"
+        android:layout_above="@+id/imageButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

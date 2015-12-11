@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item android:id="@+id/action_search"-->
+        <!--android:icon="@android:drawable/ic_menu_recent_history"-->
+        <!--android:title="test1"-->
+        <!--app:showAsAction="always"  />-->
+
+    <item
+        android:id="@+id/title"
+        android:title="Title"
+        android:icon="@drawable/todo_icon"
+        android:showAsAction="ifRoom|withText"
+        />
+
+    <item
+        android:id="@+id/priority"
+        android:title="Priority"
+        android:icon="@drawable/todo_icon"
+        android:showAsAction="ifRoom|withText"
+        />
+
+    <item
+        android:id="@+id/dueDate"
+        android:title="Due Date"
+        android:icon="@drawable/todo_icon"
+        android:showAsAction="ifRoom|withText"
+        />
+</menu>
